@@ -24,7 +24,9 @@ jobs:
       with:
         path: File1
 
-    - run: echo $TEXT
+    - run: | 
+        touch File1
+        echo File1
       env:
         TEXT: ${{ steps.hello.outputs.text }}
 
