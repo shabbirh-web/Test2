@@ -19,8 +19,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: shabbirh-web/Test2
+      id: hello
+      with:
+        path: File1
+
+    - run: echo $TEXT
+      env:
+        TEXT: ${{ steps.hello.outputs.text }}
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
