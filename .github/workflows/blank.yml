@@ -26,7 +26,7 @@ jobs:
 
     - run: | 
         touch File1
-        echo File1
+        cat File1
       env:
         TEXT: ${{ steps.hello.outputs.text }}
 
