@@ -26,14 +26,14 @@ jobs:
 
     - run: | 
         touch File.txt
-        if: (cat File.txt) == 555
-          run: amdklamsdsa
+        cat File.txt
       env:
-        TEXT: ${{ steps.hello.outputs.text }}
+        TEXT: cat File.txt
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: echo w
+      if: 'TEXT == "555"'
+      run: dfadsaad
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
