@@ -22,11 +22,11 @@ jobs:
     - uses: actions/checkout@v2
       id: hello
       with:
-        path: File1
+        path: ./
 
     - run: | 
-        touch File1
-        ls File1
+        touch File.txt
+        cat File.txt
       env:
         TEXT: ${{ steps.hello.outputs.text }}
 
