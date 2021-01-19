@@ -26,7 +26,8 @@ jobs:
 
     - run: | 
         touch File.txt
-        cat File.txt
+        if: (cat File.txt == 555)
+          run: amdklamsdsa
       env:
         TEXT: ${{ steps.hello.outputs.text }}
 
