@@ -26,12 +26,10 @@ jobs:
 
     - run: | 
         touch File.txt
-        cat File.txt
       env:
         TEXT: cat File.txt
     
     - name: Eco Text
-      if: env.TEXT == '555'
       run: echo env.TEXT
 
     # Runs a single command using the runners shell
