@@ -24,13 +24,13 @@ jobs:
       with:
         path: ./
 
-    - run: | 
+    - run:
         touch File.txt
       env:
         TEXT: cat File.txt
     
     - name: Eco Text
-      run: echo $env.TEXT
+      run: echo hello.env.TEXT
 
     # Runs a single command using the runners shell
     - name: Verify text
