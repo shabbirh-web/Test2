@@ -30,7 +30,7 @@ jobs:
         TEXT: cat File.txt
     
     - name: Eco Text
-      run: echo $TEXT
+      run: echo $env.TEXT
 
     # Runs a single command using the runners shell
     - name: Verify text
