@@ -29,9 +29,13 @@ jobs:
         cat File.txt
       env:
         TEXT: cat File.txt
+    
+    - name: Eco Text
+      if: env.TEXT == '555'
+      run: echo env.TEXT
 
     # Runs a single command using the runners shell
-    - name: Run a one-line script
+    - name: Varify text
       if: env.TEXT == '555'
       run: dfadsaad
 
