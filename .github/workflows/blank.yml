@@ -35,7 +35,7 @@ jobs:
       run: echo env.TEXT
 
     # Runs a single command using the runners shell
-    - name: Varify text
+    - name: Verify text
       if: env.TEXT == '555'
       run: dfadsaad
 
